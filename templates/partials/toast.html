@@ -1,0 +1,42 @@
+{{ define "content" }}
+<div class="space-y-3 m-4">
+    {{if .Error}}
+    <!-- Toast -->
+    <div class="max-w-xs bg-red-100 border border-red-200 text-sm text-red-800 rounded-lg dark:bg-red-800/10 dark:border-red-900 dark:text-red-500" role="alert" tabindex="-1" aria-labelledby="hs-toast-soft-color-red-label">
+      <div id="hs-toast-soft-color-red-label" class="flex p-4">
+          {{ .Error}}
+
+        <div class="ms-auto">
+          <button type="button" class="inline-flex shrink-0 justify-center items-center size-5 rounded-lg text-red-800 opacity-50 hover:opacity-100 focus:outline-none focus:opacity-100 dark:text-red-200" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    {{end}}
+
+    {{if .Success}}
+    <!-- Toast -->
+    <div class="max-w-xs bg-teal-100 border border-teal-200 text-sm text-teal-800 rounded-lg dark:bg-teal-800/10 dark:border-teal-900 dark:text-teal-500" role="alert" tabindex="-1" aria-labelledby="hs-toast-soft-color-teal-label">
+        <div id="hs-toast-soft-color-teal-label" class="flex p-4">
+            {{ .Success}}
+
+            <div class="ms-auto">
+                <button type="button" class="inline-flex shrink-0 justify-center items-center size-5 rounded-lg text-teal-800 opacity-50 hover:opacity-100 focus:outline-none focus:opacity-100 dark:text-teal-200" aria-label="Close">
+                    <span class="sr-only">Close</span>
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{end}}
+</div>
+  <!-- End Toast -->
+{{end}}

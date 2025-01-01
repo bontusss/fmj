@@ -1,0 +1,29 @@
+{
+  "name": "fundmyjollof",
+  "version": "0.0.0",
+  "description": "Frontend part of the Gowebly project.",
+  "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "fmt": "prettier --write .",
+    "build": "parcel build ./assets/scripts.js ./assets/styles.scss --dist-dir ./static",
+    "dev": "parcel build ./assets/scripts.js ./assets/styles.scss --dist-dir ./static --no-optimize",
+    "watch": "parcel watch ./assets/scripts.js ./assets/styles.scss --dist-dir ./static --no-optimize"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "latest",
+    "@tailwindcss/typography": "latest",
+    "htmx.org": "latest",
+    "hyperscript.org": "latest",
+    "preline": "latest",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "latest",
+    "autoprefixer": "latest",
+    "parcel": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "svgo": "^3.3.2"
+  }
+}
