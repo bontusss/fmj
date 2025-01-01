@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmj/config"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"log"
@@ -12,12 +12,12 @@ import (
 	"time"
 )
 
-func init() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-}
+// func init() {
+// 	err := godotenv.Load()
+// 	if err != nil {
+// 		log.Fatal("Error loading .env file")
+// 	}
+// }
 func main() {
 
 	cfg := config.NewConfig()
